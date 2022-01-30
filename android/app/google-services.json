@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1091459775127",
+    "project_id": "nirdesh-brew-crew",
+    "storage_bucket": "nirdesh-brew-crew.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091459775127:android:9413a849b5ee6450d2c7d2",
+        "android_client_info": {
+          "package_name": "com.nirdesh.brew_crew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1091459775127-updfrqfphjsgo9tlbit7jb5lt0p64ako.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt0Lxj9H-ups25ebynVhcHqWpHLsu9-50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1091459775127-updfrqfphjsgo9tlbit7jb5lt0p64ako.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
