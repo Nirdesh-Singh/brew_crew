@@ -3,17 +3,17 @@ import 'package:brew_crew/shared/constants.dart';
 import 'package:brew_crew/shared/loading.dart';
 import 'package:flutter/material.dart';
 
-class SignIn extends StatefulWidget {
+class Register extends StatefulWidget {
   final Function toggleView;
-  // SignIn({required this.toggleView});
+  //Register({required this.toggleView});
 
-  const SignIn({Key? key, required this.toggleView}) : super(key: key);
+  const Register({Key? key, required this.toggleView}) : super(key: key);
 
   @override
-  _SignInState createState() => _SignInState();
+  _RegisterState createState() => _RegisterState();
 }
 
-class _SignInState extends State<SignIn> {
+class _RegisterState extends State<Register> {
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
   bool loading = false;
@@ -32,14 +32,14 @@ class _SignInState extends State<SignIn> {
             appBar: AppBar(
               backgroundColor: Colors.brown[400],
               elevation: 0.0,
-              title: const Text('Sign in to Brew Crew'),
+              title: const Text('Sign up to Brew Crew'),
               actions: <Widget>[
                 TextButton.icon(
                   onPressed: () {
                     widget.toggleView();
                   },
                   icon: const Icon(Icons.person),
-                  label: const Text('Register'),
+                  label: const Text('Sign In'),
                 )
               ],
             ),
@@ -82,20 +82,18 @@ class _SignInState extends State<SignIn> {
                       onPressed: () async {
                         if (_formKey.currentState!.validate()) {
                           setState(() => loading = true);
-
                           dynamic result = await _auth
-                              .signInWithEmailAndPassword(email, password);
+                              .reegisterWithEmailAndPassword(email, password);
                           if (result == null) {
                             setState(() {
-                              error = 'COULD NOT SIGN IN WITH THOSE CREDENTIALS'
-                                  .toLowerCase();
+                              error = 'Please supply a valid email';
                               loading = false;
                             });
                           }
                         }
                       },
                       child: const Text(
-                        'Sign In',
+                        'Register',
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
